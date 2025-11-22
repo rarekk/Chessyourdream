@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chessyourdream</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <h1>♟️ Chessyourdream</h1>
+    
+    <div class="header-nav">
+        <button class="nav-btn" onclick="changeMonth(-1)"> < ย้อนกลับ </button>
+        
+        <h3 id="monthDisplay"></h3>
+        
+        <button class="nav-btn" onclick="changeMonth(1)"> หน้าถัดไป > </button>
+    </div>
+    
+    <div class="calendar-container" id="calendar">
+        </div>
+
+    <div class="modal" id="entryModal">
+        <div class="modal-content">
+            <h2 id="modalDateTitle">วันที่ ...</h2>
+            
+            <label>วิเคราะห์วันของคุณ:</label>
+            <select id="ratingInput">
+                <option value="">- ยังไม่ประเมิน -</option>
+                <option value="brilliant">✨ Brilliant</option>
+                <option value="great">💡 Great Move</option>
+                <option value="best">✅ Best Move</option>
+                </select>
+
+            <label>บันทึก:</label>
+            <textarea id="noteInput" rows="4" placeholder="เล่ามาซิ..."></textarea>
+
+            <label>แนบรูปภาพ:</label>
+            <input type="file" id="imageInput" accept="image/*">
+            
+            <img id="imagePreview" class="preview-img" alt="Preview">
+
+            <div style="margin-top: 15px;">
+                <button class="close-btn" onclick="closeModal()">ยกเลิก</button>
+                <button onclick="saveData()">บันทึก</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
